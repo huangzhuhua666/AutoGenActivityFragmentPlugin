@@ -1,0 +1,32 @@
+<idea-plugin>
+  <id>com.example.hzh.genactfrg</id>
+  <name>GenGo</name>
+  <version>1.0</version>
+  <vendor email="sdhzh666@163.com"/>
+
+  <description>A plugin help gen Activity/Fragment with relative file</description>
+
+  <change-notes>1.0 version of this plugin with base action</change-notes>
+
+  <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="173.0"/>
+
+  <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <depends>com.intellij.modules.platform</depends>
+  <depends>org.jetbrains.kotlin</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+    <action id="AutoGenActivityFragmentPlugin.GenAction" class="FileGenAction" text="GenGo"
+            description="Auto gen Activity/Fragment with relative file">
+      <add-to-group group-id="CodeMenu" anchor="last"/>
+      <keyboard-shortcut keymap="$default" first-keystroke="ctrl meta alt G"/>
+    </action>
+  </actions>
+
+</idea-plugin>
