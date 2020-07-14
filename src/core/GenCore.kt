@@ -17,10 +17,12 @@ import java.util.*
 /**
  * Create by hzh on 2020/07/09.
  */
-private val currUser = System.getProperty("user.name")
-private val currDate = SimpleDateFormat("yyyy/MM/dd", Locale.getDefault()).format(Date())
+private var currUser = ""
+private var currDate = ""
 
 fun Project.genCore(prefix: String, fileType: Int, vmType: Int) {
+    currUser = System.getProperty("user.name")
+    currDate = SimpleDateFormat("yyyy/MM/dd", Locale.getDefault()).format(Date())
     getAppPackageBaseDir()?.let { base ->
         if (vmType != -1) {
             // 生成Model
