@@ -1,12 +1,12 @@
 <idea-plugin>
   <id>com.example.hzh.genactfrg</id>
   <name>GenGo</name>
-  <version>1.0</version>
+  <version>1.1</version>
   <vendor email="sdhzh666@163.com"/>
 
   <description>A plugin help gen Activity/Fragment with relative file</description>
 
-  <change-notes>1.0 version of this plugin with base action</change-notes>
+  <change-notes>1.1 version fix some bug</change-notes>
 
   <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
   <idea-version since-build="173.0"/>

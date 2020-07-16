@@ -177,7 +177,7 @@ import $appPackage.model.$model
 import $appPackage.viewmodel.$vm
 import com.example.hzh.common.activity.TwActivity
 """.trimIndent() else """
-com.example.hzh.common.activity.UIActivity
+import com.example.hzh.common.activity.UIActivity
 """.trimIndent()}
 
 /**
