@@ -112,7 +112,7 @@ private fun Project.genVM(dir: VirtualFile, prefix: String, type: Int) {
         val text = """
 package ${dir.getFilePackageName()}
 
-import com.example.hzh.common.viewmodel.$parent
+import com.tw.common.viewmodel.$parent
 import ${getAppPackageName()}.model.${prefix}Model
 
 /**
@@ -167,7 +167,7 @@ private fun Project.genActivityCode(dir: VirtualFile, prefix: String, isCreateVM
 package ${dir.getFilePackageName()}
 
 import com.xiaojinzi.component.anno.RouterAnno
-import com.example.hzh.common.RouterConfig
+import com.tw.common.RouterConfig
 import $appPackage.databinding.$binding
 ${if (isCreateVM) """
 import androidx.activity.viewModels
@@ -175,9 +175,9 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import $appPackage.model.$model
 import $appPackage.viewmodel.$vm
-import com.example.hzh.common.activity.TwActivity
+import com.tw.common.activity.TwActivity
 """.trimIndent() else """
-import com.example.hzh.common.activity.UIActivity
+import com.tw.common.activity.UIActivity
 """.trimIndent()}
 
 /**
@@ -246,7 +246,7 @@ package ${dir.getFilePackageName()}
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import com.example.hzh.common.RouterConfig
+import com.tw.common.RouterConfig
 import com.xiaojinzi.component.anno.FragmentAnno
 import $appPackage.databinding.$binding
 ${if (isCreateVM) """
@@ -255,9 +255,9 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import $appPackage.model.$model
 import $appPackage.viewmodel.$vm
-import com.example.hzh.common.fragment.TwFragment
+import com.tw.common.fragment.TwFragment
 """.trimIndent() else """
-import com.example.hzh.common.fragment.UIFragment
+import com.tw.common.fragment.UIFragment
 """.trimIndent()}
 
 /**
